@@ -152,7 +152,7 @@ extension LogoControl.FontControl {
         override func updateTheme() {
             let isDark = traitCollection.userInterfaceStyle == .dark
             
-            previewLabel.textColor = isDark ? UIColor(white: 0.85, alpha: 1) : UIColor(white: 0.3, alpha: 1)
+            previewLabel.textColor = isDark ? LogoControl.Constants.textColorDarkMode : UIColor(white: 0.3, alpha: 1)
             fontNameLabel.textColor = isDark ? UIColor(white: 0.65, alpha: 1) : UIColor(white: 0.5, alpha: 1)
             
             let bgColorNonSelected = isDark ? .white.withAlphaComponent(0.06) : UIColor(white: 0.92, alpha: 1)

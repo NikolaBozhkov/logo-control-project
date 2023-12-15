@@ -23,7 +23,6 @@ extension LogoControl {
             super.init()
             
             label.text = "Background Color"
-            colorBox.backgroundColor = .green
             colorBox.layer.cornerRadius = 7
             
             view.addSubview(label)
@@ -58,6 +57,11 @@ extension LogoControl {
                bounds.contains(touch.location(in: self)) {
                 pressHandler?()
             }
+        }
+        
+        override func updateTheme() {
+            let isDark = traitCollection.userInterfaceStyle == .dark
+            label.textColor = isDark ? Constants.textColorDarkMode : .black
         }
     }
 }

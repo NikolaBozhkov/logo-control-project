@@ -98,6 +98,8 @@ extension LogoControl {
         override func updateTheme() {
             let isDark = traitCollection.userInterfaceStyle == .dark
             
+            titleLabel.textColor = isDark ? Constants.textColorDarkMode : .black
+            
             divider.backgroundColor = isDark ? UIColor(white: 0.2, alpha: 1) : UIColor(white: 0.87, alpha: 1)
             
             if !UIAccessibility.isReduceTransparencyEnabled && isDark {
@@ -185,7 +187,7 @@ extension LogoControl.ImagePicker {
             view.backgroundColor = isDark ? .white.withAlphaComponent(0.06) : UIColor(white: 0.92, alpha: 1)
             defaultBgColor = view.backgroundColor!
             
-            label.textColor = isDark ? UIColor(white: 0.85, alpha: 1) : UIColor(white: 0.25, alpha: 1)
+            label.textColor = isDark ? LogoControl.Constants.textColorDarkMode : UIColor(white: 0.25, alpha: 1)
             defaultTextColor = label.textColor
             icon.tintColor = label.textColor
         }

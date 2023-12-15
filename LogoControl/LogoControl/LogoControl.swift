@@ -279,7 +279,7 @@ class LogoControl: BaseView, UIImagePickerControllerDelegate, UINavigationContro
     override func updateTheme() {
         let isDark = traitCollection.userInterfaceStyle == .dark
         view.layer.borderWidth = isDark ? 1 : 0
-        
+        titleLabel.textColor = isDark ? Constants.textColorDarkMode : .black
         divider.backgroundColor = isDark ? UIColor(white: 0.2, alpha: 1) : UIColor(white: 0.87, alpha: 1)
         
         if !UIAccessibility.isReduceTransparencyEnabled && isDark {
@@ -340,5 +340,6 @@ extension LogoControl {
         static let paddingX: CGFloat = 16
         static let closeButtonSize: CGFloat = 32
         static let cornerRadius: CGFloat = 12
+        static let textColorDarkMode = UIColor(white: 0.95, alpha: 1)
     }
 }

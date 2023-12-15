@@ -76,6 +76,8 @@ extension LogoControl {
             
             imagePreview.backgroundColor = isDark ? .black.withAlphaComponent(0.27) : UIColor(white: 1, alpha: 1)
             imagePreview.layer.borderColor = isDark ? CGColor(gray: 0.2, alpha: 1) : CGColor(gray: 0.83, alpha: 1)
+            
+            label.textColor = isDark ? Constants.textColorDarkMode : .black
         }
     }
 }

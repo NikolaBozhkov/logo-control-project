@@ -158,7 +158,7 @@ extension SwitchControl {
         
         private func updateTheme() {
             let isDark = traitCollection.userInterfaceStyle == .dark
-            let colorSelected = isDark ? UIColor.white : .black
+            let colorSelected = isDark ? LogoControl.Constants.textColorDarkMode : .black
             let colorNonSelected = isDark ? UIColor(white: 0.75, alpha: 1) : UIColor(white: 0.4, alpha: 1)
             textColor = isSelected ? colorSelected : colorNonSelected
         }

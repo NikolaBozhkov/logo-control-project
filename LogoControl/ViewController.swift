@@ -10,7 +10,6 @@ import UIKit
 class ViewController: UIViewController {
     
     let logoSize: CGFloat = 80
-    
     var activeLogoControl: LogoControl?
     
     let teamSpaceLogoControl = LogoControl(title: "Logo Settings")
